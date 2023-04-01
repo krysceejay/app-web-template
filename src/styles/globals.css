@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+
+.container {
+    @apply max-w-[1400px] py-0 px-4 md:px-8 m-auto overflow-hidden;
+ }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #F5F6FA inset !important;
+}
+
+.auto-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr))
+}
+ 
+
+@tailwind utilities;
