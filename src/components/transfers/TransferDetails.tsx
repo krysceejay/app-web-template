@@ -7,13 +7,13 @@ interface TransferDetailsProps {
 
 export default function TransferDetails({goTo}: TransferDetailsProps){
   return (
-    <div className="w-3/5 mx-auto">
+    <div className="w-full sm:w-[420px] mx-auto">
         <div className="flex justify-between items-center">
             <div 
             className="
                 relative flex flex-col justify-center items-center w-full">
             <div className="w-4 h-4 bg-green-color rounded-full z-10 cursor-pointer" onClick={() => goTo(0)} />
-            <p className="text-green-color text-xs font-semibold mt-2.5">Transfer Details</p>
+            <p className="text-green-color text-[10px] min-[420px]:text-xs font-semibold mt-2.5">Transfer Details</p>
             </div>
             <div 
             className="
@@ -21,7 +21,7 @@ export default function TransferDetails({goTo}: TransferDetailsProps){
                 before:content-[''] before:bg-[#D9D9D9] before:absolute before:w-full before:h-[2px] 
                 before:right-1/2 before:top-[36%] before:-translate-y-2">
             <div className="w-4 h-4 bg-[#D9D9D9] rounded-full z-10 cursor-pointer" onClick={() => goTo(1)} />
-            <p className="text-xs font-semibold mt-2.5">Select Beneficiary</p>
+            <p className="text-[10px] min-[420px]:text-xs font-semibold mt-2.5">Select Beneficiary</p>
             </div>
             <div 
             className="
@@ -29,10 +29,10 @@ export default function TransferDetails({goTo}: TransferDetailsProps){
                 before:content-[''] before:bg-[#D9D9D9] before:absolute before:w-full before:h-[2px] 
                 before:right-1/2 before:top-[36%] before:-translate-y-2">
             <div className="w-4 h-4 bg-[#D9D9D9] rounded-full z-10 cursor-pointer" onClick={() => goTo(2)} />
-            <p className="text-xs font-semibold mt-2.5">Confirm & Pay</p>
+            <p className="text-[10px] min-[420px]:text-xs font-semibold mt-2.5">Confirm & Pay</p>
             </div>
         </div>
-        <div className="mt-10">
+        <div className="mt-10 px-2">
             <div className="bg-[#F5F6FA] p-4 rounded-md flex justify-between items-center">
             <div>
                 <p className="text-[#888888] text-[10px]">You send</p>

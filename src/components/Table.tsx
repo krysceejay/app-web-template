@@ -1,6 +1,7 @@
 'use client'
 
 import DetailsLink from '@/components/DetailsLink'
+import Pagination from '@/components/Pagination'
 
 interface TableProps {
   showSearch: boolean,
@@ -11,17 +12,17 @@ export default function Table({ showSearch, pageName }: TableProps){
   return (
     <div className="mt-5 bg-white rounded-md overflow-hidden">
         {showSearch &&
-        <div className="py-10 border-b border-b-[#F5F6FA]">
-            <div className="w-[512px] flex items-center px-10">
+        <div className="py-10 border-b border-b-[#F5F6FA] w-full">
+            <div className="w-full sm:w-2/3 flex items-center px-6 md:px-10">
                 <input 
                     className="
-                    w-[435px] h-9 appearance-none border border-[#D7D7D7] rounded-l bg-white px-3 text-[#242424] text-sm 
+                    flex-1 w-full h-9 appearance-none border border-[#D7D7D7] rounded-l rounded-r-none bg-white px-3 text-[#242424] text-sm 
                     leading-tight focus:outline-none focus:shadow-none placeholder:italic" 
                     type="text" 
                     name="firstname"
                     placeholder={`Search ${pageName}`} 
                 />
-                <div className="border border-[#D7D7D7] border-l-0 h-9 rounded-r text-center text-xs flex justify-center items-center px-[18px] cursor-pointer">Search</div>
+                <div className="border border-[#D7D7D7] border-l-0 w-20 h-9 rounded-r text-center text-xs flex justify-center items-center px-3 cursor-pointer">Search</div>
             </div>
         </div>
         }
@@ -150,27 +151,9 @@ export default function Table({ showSearch, pageName }: TableProps){
             </table>
         </div>
         {showSearch &&
-        <div className="px-14 py-6 border-t border-t-[#F5F6FA] flex justify-between items-center">
-            <h3 className="text-green-color cursor-pointer text-xs">Download as CSV</h3>
-            <div className="flex items-center space-x-3 text-xs">
-                <button className="w-6 h-6 rounded">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mx-auto">
-                        <path fillRule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clipRule="evenodd" />
-                    </svg>
-                </button>
-                <button className="w-6 h-6 bg-[#EBF2FC] rounded">1</button>
-                <button className="w-6 h-6 bg-white rounded">2</button>
-                <button className="w-6 h-6 bg-white rounded">3</button>
-                <button className="w-6 h-6 bg-white rounded">4</button>
-                <button className="w-6 h-6 bg-white rounded">5</button>
-                <button className="w-6 h-6 bg-white rounded">6</button>
-                <button className="w-6 h-6 bg-white rounded">7</button>
-                <button className="w-6 h-6 rounded">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mx-auto">
-                        <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-                    </svg>
-                </button>
-            </div>
+        <div className="py-6 px-6 md:px-10 border-t border-t-[#F5F6FA] flex flex-wrap-reverse justify-between items-center">
+            <h3 className="text-green-color cursor-pointer text-xs py-2">Download as CSV</h3>
+            <Pagination />
         </div>
         }
     </div>

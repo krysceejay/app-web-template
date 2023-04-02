@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+import PageTopOne from '@/components/PageTopOne'
+
 export default function KYCDocuments() {
   return (
     <main className="flex-grow">
-      <section>
-        <h1 className="text-2xl font-semibold">KYC Documents</h1>
-      </section>
-      <section className="bg-white p-[38px] rounded-md mt-9">
-        <div className="py-6 px-10 grid gap-4 grid-cols-5">
+      <PageTopOne title="KYC Documents" hasBtn={false} link="/" />
+      <section className="bg-white rounded-md mt-9 py-3.5 overflow-hidden">
+        <div className="p-6 sm:px-10 auto-grid">
           <div className="border border-[#D7D7D7] rounded-md flex flex-col justify-center items-center px-4 py-7 bg-white cursor-pointer">
             <Image 
               alt="Identity Proof" 

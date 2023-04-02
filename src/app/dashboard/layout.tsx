@@ -97,10 +97,10 @@ export default function DashboardLayout({
             </div>
           </div>
         </nav>
-        <section className="px-6 xl:px-10 pt-10 pb-14 flex flex-col min-h-[95vh]">
+        <section className="px-4 md:px-6 xl:px-10 pt-10 pb-14 flex flex-col min-h-[95vh]">
           {children}
         </section>
-        <footer className="bg-transparent mx-6 xl:mx-10 py-7 border-t border-[#E0E0E0]">
+        <footer className="bg-transparent mx-4 md:mx-6 xl:mx-10 py-7 border-t border-[#E0E0E0]">
           <div className="text-xs">
               By using this website, you accept our <Link href="/" className="text-[#009933]">Terms of Use</Link> and <Link href="/" className="text-[#009933]">Privacy Policy</Link>. Copyright &copy; {new Date().getFullYear()} Vargent Africa.
           </div>

@@ -5,6 +5,7 @@ import { useState } from "react"
 import TransferDetails from '@/components/transfers/TransferDetails'
 import Beneficiary from '@/components/transfers/Beneficiary'
 import ConfirmPay from '@/components/transfers/ConfirmPay'
+import PageTopOne from "@/components/PageTopOne"
 
 
 
@@ -23,15 +24,12 @@ export default function NewTransfer() {
 
   return (
     <main className="flex-grow">
-      <section>
-        <h1 className="text-2xl font-semibold">New Transfer</h1>
-      </section>
-      <section className="flex space-x-3.5 mt-9 items-start">
-        <div className="bg-white flex-1 rounded px-24 pt-11 pb-[52px] min-h-[660px]">
+      <PageTopOne title="New Transfer" hasBtn={false} link="/" />
+      <section className="flex space-y-3.5 mt-9 items-start flex-col min-[835px]:flex-row min-[835px]:space-x-3.5 min-[835px]:space-y-0">
+        <div className="bg-white md:flex-1 rounded px-0 min-[420px]:px-6 py-11 w-full">
           {steps[currentStepIndex]}
         </div>
-        <div className="w-[390px] bg-white rounded px-8 py-11">
-          <div>
+        <div className="w-full xl:w-[390px] bg-white rounded mt-4 md:mt-0 px-6 py-11 whitespace-break-spaces">
             <h3 className="text-base">Payment Details</h3>
             <div className="mt-3">
               <div className="flex justify-between items-center py-3 border-t border-[#E0E0E0]">
@@ -81,7 +79,6 @@ export default function NewTransfer() {
                 <span className={`text-sm font-bold ${currentStepIndex == 2 && 'text-green-color'}`}>NGN 83,000.00</span>
               </div>
             </div>
-          </div>
         </div>
       </section>
     </main>

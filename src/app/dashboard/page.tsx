@@ -7,7 +7,7 @@ import Table from '@/components/Table'
 export default function Dashboard() {
   return (
     <section className="flex-grow">
-      <h1 className="text-2xl font-semibold">Dashboard</h1>
+      <h1 className="text-xl sm:text-2xl font-semibold">Dashboard</h1>
       <section>
         <div className="flex flex-col md:flex-row mt-9 space-y-4 md:space-x-4 md:space-y-0 lg:space-x-5">
           <div className="bg-white rounded-md p-5 lg:p-6 shadow-lg w-full md:w-1/3">
@@ -119,7 +119,7 @@ export default function Dashboard() {
       </section>
       <section className="mt-11">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-semibold">Recent Transfers</h1>
+          <h1 className="text-xl sm:text-2xl font-semibold">Recent Transfers</h1>
           <Link href="/dashboard/transfers" className="text-sm font-semibold text-green-color">See all</Link>
         </div>
         <Table showSearch={false} pageName="" />
