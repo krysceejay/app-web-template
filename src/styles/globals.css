@@ -17,6 +17,68 @@ input:-webkit-autofill:active{
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
 }
+
+.auto-grid2 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(126px, 1fr))
+}
+
+  .sidebar {
+      transition: all 0.5s ease-in-out;
+  }
+
+  .sidebar .togglebtn {
+    position: absolute;
+    top: 24px;
+    right: -32px;
+    width: 32px;
+    height: 22px;
+    background: white;
+    cursor: pointer;
+  }
+
+  .sidebar .togglebtn span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #111;
+    transform: translateY(-50%);
+    transition: all 0.5s ease-in-out;
+    border-radius: 2px;
+  }
+
+  .sidebar .togglebtn span:nth-child(1) {
+    top: 10%;
+  }
+  .sidebar .togglebtn span:nth-child(2) {
+    top: 50%;
+  }
+  .sidebar .togglebtn span:nth-child(3) {
+    top: 90%;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar.active .togglebtn {
+    background: #242424;
+  }
+
+  .sidebar.active .togglebtn span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: white;
+  }
+  .sidebar.active .togglebtn span:nth-child(2) {
+    display: none;
+  }
+  .sidebar.active .togglebtn span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    background-color: white;
+  }
  
 
 @tailwind utilities;

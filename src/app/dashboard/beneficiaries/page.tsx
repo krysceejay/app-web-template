@@ -10,7 +10,7 @@ export default function Beneficiaries() {
       <section className="mt-9">
         <div className="bg-white rounded-md overflow-hidden">
           <div className="py-10 border-b border-b-[#F5F6FA] w-full">
-            <div className="w-full sm:w-2/3 flex items-center px-6 md:px-10">
+            <div className="w-full sm:w-2/3 md:w-1/2 flex items-center px-6 md:px-10">
                 <input 
                     className="
                     flex-1 w-full h-9 appearance-none border border-[#D7D7D7] rounded-l rounded-r-none bg-white px-3 text-[#242424] text-sm 

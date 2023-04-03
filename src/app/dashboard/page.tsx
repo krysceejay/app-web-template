@@ -66,7 +66,7 @@ export default function Dashboard() {
               <div className="mt-5 w-[60px] h-[60px] relative">
                 <Image 
                   alt="Profile Picture" 
-                  src="/asset/img/photo.jpg"
+                  src="/asset/img/prop.png"
                   width={60}
                   height={60}
                   className="h-full object-cover rounded-full"
