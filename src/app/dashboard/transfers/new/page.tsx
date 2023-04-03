@@ -17,9 +17,9 @@ export default function NewTransfer() {
   }
   
   const steps = [
-    <TransferDetails goTo={goTo} />,
-    <Beneficiary goTo={goTo} />,
-    <ConfirmPay goTo={goTo} />
+    <TransferDetails key={1} goTo={goTo} />,
+    <Beneficiary key={2} goTo={goTo} />,
+    <ConfirmPay key={3} goTo={goTo} />
   ]
 
   return (
