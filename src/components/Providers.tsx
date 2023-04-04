@@ -6,10 +6,10 @@ interface ProvidersProps {
   children: ReactNode
 }
 
-export default function Providers({ children }: ProvidersProps){
+export default function Providers({ children }: ProvidersProps) {
   return (
     <div>
-        {children}
+      {children}
     </div>
   )
 }

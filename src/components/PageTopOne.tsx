@@ -8,11 +8,11 @@ interface PageTopOneProps {
   hasBtn: boolean
 }
 
-export default function PageTopOne({ title, buttonText, link, hasBtn}: PageTopOneProps){
+export default function PageTopOne({ title, buttonText, link, hasBtn }: PageTopOneProps) {
   return (
     <div className="min-[360px]:flex justify-between items-center block">
-        <h3 className="text-xl sm:text-2xl font-semibold">{title}</h3>
-        {hasBtn &&
+      <h3 className="text-xl sm:text-2xl font-semibold">{title}</h3>
+      {hasBtn &&
         <Link href={link} className="inline-block mt-2 min-[360px]:mt-0">
           <Button>
             <div className="flex items-center space-x-2 bg-green-color py-2 sm:py-3 px-4 rounded-md">
@@ -23,7 +23,7 @@ export default function PageTopOne({ title, buttonText, link, hasBtn}: PageTopOn
             </div>
           </Button>
         </Link>
-        }
+      }
     </div>
   )
 }
